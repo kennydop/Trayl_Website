@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trayl</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <ul>
+                <div class = "company">
+                    <li class = "logo"><img src="images/trayl_logo_b.png" alt="logo"></li>
+                    <li class="brand">Trayl</li>
+                </div>
+                <div class = "menu">
+                    <li class="active">Home</li>
+                    <li>Support</li>
+                    <li>Services</li>
+                    <li>About Us</li>
+                </div>
+            </ul>
+        </div>
+            <div class="content">
+                <div class="slider">
+                    <div class="slides">
+                        <!-- radio buttons -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+
+                        <!-- slide images -->
+                        <div class="slide showing"><img src="images/ban1.png" alt="Headline 1"></div>
+                        <div class="slide"><img src="images/ban2.png" alt="Headline 2"></div>
+                        <div class="slide"><img src="images/CD ban.png" alt="Headline 3"></div>
+                        <div class="slide"><img src="images/traylban.png" alt="Headline 4"></div>
+                        
+                        <!-- auto navigation -->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                        
+                        <!-- manual navigation -->
+                        <div class="navigation-manual">
+                            <label for="radio1" class="manual-btn"></label>
+                            <label for="radio2" class="manual-btn"></label>
+                            <label for="radio3" class="manual-btn"></label>
+                            <label for="radio4" class="manual-btn"></label>
+                        </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script type = "text/javascript">
+    var counter = 1;
+    setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter > 4)
+        counter = 1;
+    }, 5000);
+    </script>
+    </body>
+</html>
